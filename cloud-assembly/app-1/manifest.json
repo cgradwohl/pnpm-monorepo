@@ -1,28 +1,28 @@
 {
   "version": "35.0.0",
   "artifacts": {
-    "App1Stack.assets": {
+    "bar.assets": {
       "type": "cdk:asset-manifest",
       "properties": {
-        "file": "App1Stack.assets.json",
+        "file": "bar.assets.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
       }
     },
-    "App1Stack": {
+    "bar": {
       "type": "aws:cloudformation:stack",
       "environment": "aws://unknown-account/unknown-region",
       "properties": {
-        "templateFile": "App1Stack.template.json",
+        "templateFile": "bar.template.json",
         "terminationProtection": false,
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3e762024ef3563e6e332d710db21412efd250cde92647f1bc262706cf12cf6e8.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/2c7b55e842d416646b8533f7de895cbe0da8017dde63f02e07968c9319d1ec29.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
-          "App1Stack.assets"
+          "bar.assets"
         ],
         "lookupRole": {
           "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
@@ -31,35 +31,35 @@
         }
       },
       "dependencies": [
-        "App1Stack.assets"
+        "bar.assets"
       ],
       "metadata": {
-        "/App1Stack/CDKMetadata/Default": [
+        "/bar/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadata"
           }
         ],
-        "/App1Stack/CDKMetadata/Condition": [
+        "/bar/CDKMetadata/Condition": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadataAvailable"
           }
         ],
-        "/App1Stack/BootstrapVersion": [
+        "/bar/BootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "BootstrapVersion"
           }
         ],
-        "/App1Stack/CheckBootstrapVersion": [
+        "/bar/CheckBootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CheckBootstrapVersion"
           }
         ]
       },
-      "displayName": "App1Stack"
+      "displayName": "bar"
     },
     "Tree": {
       "type": "cdk:tree",
